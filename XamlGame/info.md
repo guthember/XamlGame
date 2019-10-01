@@ -7,6 +7,7 @@ Felkészítés a komolyabb tanfolyamokra
 ## Eszközök
 ### Markdown
 Leírónyelv, dokumentációkészítéshez
+[Markdown cheet sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
 ### Github
@@ -34,5 +35,21 @@ Végeredmény megfogalmazása (nem mit és milyen sorrendben).
 XML alapú.
 
 [Egy részletes tutorial a WPF-ről.](https://wpf-tutorial.com/)
+
+### Specifikáció
+Miért van értelme?
+- Megtervezzük a programot
+- Hatékony kommunikáció a résztvevők között
+- Ütemterv készítésének a bemeneti információja
+- A döntések kikényszerítése
+
+[Képernyőrajzoláshoz: mockflow](https://mockflow.com/)
+
+Egy cikksorozat magyarul:
+[1. De miért is fáradnál](https://web.archive.org/web/20170626142454/http://hungarian.joelonsoftware.com/PainlessSpecs/1.html)
+[2. Mi is ez a specifikáció](https://web.archive.org/web/20170626142549/http://hungarian.joelonsoftware.com/PainlessSpecs/2.html)
+[3. De... hogyan](https://web.archive.org/web/20170626142610/http://hungarian.joelonsoftware.com/PainlessSpecs/3.html)
+[4. Tippek](https://web.archive.org/web/20170626142615/http://hungarian.joelonsoftware.com/PainlessSpecs/4.html)
+
 
 
