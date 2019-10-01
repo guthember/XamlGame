@@ -51,5 +51,24 @@ Egy cikksorozat magyarul:
 [3. De... hogyan](https://web.archive.org/web/20170626142610/http://hungarian.joelonsoftware.com/PainlessSpecs/3.html)
 [4. Tippek](https://web.archive.org/web/20170626142615/http://hungarian.joelonsoftware.com/PainlessSpecs/4.html)
 
+### Fontawesome
+Nyílt forráskódú ikonkönyvtár.
+Karakterkészletben letölthető.
+
+[weboldal](https://fontawesome.com/)
+
+Ezt egy [nuget csomaggal](https://www.nuget.org/packages/FontAwesome.WPF/) telepítjük.
+
+A projekt könyvtára: [github](https://github.com/charri/Font-Awesome-WPF)
+
+
+### Nuget
+Segítségével külső fejlesztők csomagjait használhatjuk a projektünkben.
+
+[12 tényezős alkalmazásfejlesztés (Netacademia blogon!)](https://netacademia.blog.hu/2016/04/16/hogy_kerulhetuk_el_a_szoftverpusztulast_12factor_app_1_a_kodbazis)
+
+
+
+
 
 
