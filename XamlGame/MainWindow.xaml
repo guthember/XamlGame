@@ -43,7 +43,8 @@
     </StackPanel>
 
     <!-- Kártyák -->
-    <fa:ImageAwesome Grid.Column="0"
+    <fa:ImageAwesome x:Name="CardLeft"
+            Grid.Column="0"
             Grid.Row="1"
             Icon="None" 
             VerticalAlignment="Center"
@@ -51,7 +52,8 @@
             Margin="20"
          />
 
-    <fa:ImageAwesome Grid.Column="1"
+    <fa:ImageAwesome x:Name="CardRight"
+      Grid.Column="1"
             Grid.Row="1"
             Icon="None" 
             VerticalAlignment="Center"

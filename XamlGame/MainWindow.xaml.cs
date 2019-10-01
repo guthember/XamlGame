@@ -27,7 +27,20 @@ namespace XamlGame
 
         private void ShowNewCard_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("ShowNewCard has clicked.");
+            //System.Diagnostics.Debug.WriteLine("ShowNewCard has clicked.");
+
+            // kell egy hatlapos kártyacsomag
+            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
+            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
+            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
+            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+
+            // dobunk dobókockával
+            // amelyik kártyát kijelöli a kocka, megjelenítjük a jobboldali kártyahelyen
+            CardRight.Icon = card5;
+
         }
     }
 }
