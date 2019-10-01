@@ -22,3 +22,15 @@ A **jó** programozó élethosszig tanul. A felnőttkori tanulás 4 pillére:
 
 [AGES: Attention, Generation, Emotion, Spacing](https://www.inc.com/laura-garnett/four-secrets-to-learning-anything-according-to-neuroscience.html)
 
+### WPF: Windows Presentation Foundation
+
+WPF, UWP App, Xamarin
+
+### XAML
+
+Declaratív leírónyelv.
+Végeredmény megfogalmazása (nem mit és milyen sorrendben).
+
+XML alapú.
+
+

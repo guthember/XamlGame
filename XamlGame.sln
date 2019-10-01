@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29324.140
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlGame", "XamlGame\XamlGame.csproj", "{7E4A8B52-CFB8-4EC9-B2DF-767CC77E4ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01GridLayer", "01GridLayer\01GridLayer.csproj", "{BBF25B66-A9C0-4B87-8542-0699D7BF6F8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7E4A8B52-CFB8-4EC9-B2DF-767CC77E4ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4A8B52-CFB8-4EC9-B2DF-767CC77E4ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E4A8B52-CFB8-4EC9-B2DF-767CC77E4ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF25B66-A9C0-4B87-8542-0699D7BF6F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF25B66-A9C0-4B87-8542-0699D7BF6F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF25B66-A9C0-4B87-8542-0699D7BF6F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF25B66-A9C0-4B87-8542-0699D7BF6F8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
