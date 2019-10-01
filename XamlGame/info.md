@@ -33,4 +33,6 @@ Végeredmény megfogalmazása (nem mit és milyen sorrendben).
 
 XML alapú.
 
+[Egy részletes tutorial a WPF-ről.](https://wpf-tutorial.com/)
+
 
