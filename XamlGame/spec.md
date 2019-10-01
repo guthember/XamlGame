@@ -34,9 +34,22 @@ Elindul a játék
 - A kezdőképernyőn nincs semmilyen felfordított kártya.
 - Megmutatjuk az első kártyát
 
-    Ilyenkor még nem várunk visszajelzést
+Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor lehetséges, ha vannak egyforma kártyák a pakliban. Vagy minden húzás után visszatesszük a kártyát és újra megkeverjük, vagy a pakliban eleve több egyforma kártya van.
+        
+   Minden alkalommal újra keverjük a kártyát.
+
+   Mekkora legyen a kártyapakli. Minél nagyobb a pakli, annál valószínűtlenebb, hogy egymás után kétszer ugyanaz a kártya legyen a legtetején.
+
+   Tehát egy értelmes pakli méretet kell választani. Legyen 6, de majd ezt tesztelni kell, később változtatható legyen.
+   
+   Majd választjuk a pakliból valamelyik kártyát.
+
+   **Ilyenkor még nem várunk visszajelzést**
 
 - Megmutatjuk a következő kártyát
+
+    Ugyanúgy mint az első kártyánál
+
   - Várunk a felhasználó visszajelzésére
   - Vagy lejár az idő
   - Értékeljük a visszajelzést
