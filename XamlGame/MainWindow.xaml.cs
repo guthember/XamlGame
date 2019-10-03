@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FontAwesome.WPF;
+using System.Diagnostics;
 
 namespace XamlGame
 {
@@ -88,9 +89,14 @@ namespace XamlGame
 
         private void btnYes_Click(object sender, RoutedEventArgs e)
         {
+            YesAnswer();
+        }
+
+        private void YesAnswer()
+        {
             if (elozoKartya == CardRight.Icon)
             {
-                
+
                 HelyesValasz();
             }
             else
@@ -114,6 +120,11 @@ namespace XamlGame
 
         private void btnNo_Click(object sender, RoutedEventArgs e)
         {
+            NoAnswer();
+        }
+
+        private void NoAnswer()
+        {
             if (elozoKartya == CardRight.Icon)
             {
                 HelytelenValasz();
@@ -123,6 +134,26 @@ namespace XamlGame
                 HelyesValasz();
             }
             UjKartyaHuzasa();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            Debug.WriteLine(e.Key);
+
+            if (e.Key == Key.Left)
+            {
+                // Nem gomb
+                NoAnswer();
+            }
+            else if (e.Key == Key.Right)
+            {
+                // Igen gomb
+                YesAnswer();
+            }
+            else if (e.Key == Key.Down)
+            {
+                // Hasonló gomb
+            }
         }
     }
 }
