@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FontAwesome.WPF;
 
 namespace XamlGame
 {
@@ -21,6 +22,7 @@ namespace XamlGame
     public partial class MainWindow : Window
     {
         private int huzasokSzama = 0;
+        FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
 
         public MainWindow()
         {
@@ -39,13 +41,13 @@ namespace XamlGame
             //var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
             //var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
 
-            var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6] {
-                    FontAwesome.WPF.FontAwesomeIcon.Car,
-                    FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline,
-                    FontAwesome.WPF.FontAwesomeIcon.Briefcase,
-                    FontAwesome.WPF.FontAwesomeIcon.Book,
-                    FontAwesome.WPF.FontAwesomeIcon.Male,
-                    FontAwesome.WPF.FontAwesomeIcon.Female
+            var kartyak = new FontAwesomeIcon[6] {
+                    FontAwesomeIcon.Car,
+                    FontAwesomeIcon.SnowflakeOutline,
+                    FontAwesomeIcon.Briefcase,
+                    FontAwesomeIcon.Book,
+                    FontAwesomeIcon.Male,
+                    FontAwesomeIcon.Female
             };
 
             // dobunk dobókockával
@@ -58,12 +60,45 @@ namespace XamlGame
             huzasokSzama++;
             if (huzasokSzama == 2)
             {
-                btnAlmost.IsEnabled = true;
+                // Egyelőre nem kell
+                //btnAlmost.IsEnabled = true;
                 btnNo.IsEnabled = true;
                 btnYes.IsEnabled = true;
+                ShowNewCard.IsEnabled = false;
             }
+
+            elozoKartya = CardRight.Icon;
             CardRight.Icon = kartyak[dobas];
 
+        }
+
+        private void btnAlmost_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnYes_Click(object sender, RoutedEventArgs e)
+        {
+            if (elozoKartya == CardRight.Icon)
+            {
+                System.Diagnostics.Debug.WriteLine("Helyes");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Helytelen");
+            }
+        }
+
+        private void btnNo_Click(object sender, RoutedEventArgs e)
+        {
+            if (elozoKartya == CardRight.Icon)
+            {
+                System.Diagnostics.Debug.WriteLine("Helytelen");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Helyes");
+            }
         }
     }
 }

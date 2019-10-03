@@ -78,25 +78,25 @@
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False"
+                IsEnabled="False" Click="btnNo_Click"
                 />
 
       <Button x:Name="btnYes" Grid.Row="0"
-                Grid.Column="1"
+                Grid.Column="2"
                 Content="Igen"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False"
+                IsEnabled="False" Click="btnYes_Click"
                 />
 
       <Button x:Name="btnAlmost" Grid.Row="0"
-                Grid.Column="2"
+                Grid.Column="1"
                 Content="Részben"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
-                IsEnabled="False"
+                IsEnabled="False" Click="btnAlmost_Click"
                 />
     
      <Button 

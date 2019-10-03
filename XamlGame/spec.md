@@ -51,6 +51,8 @@ Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor 
     Ugyanúgy mint az első kártyánál
 
   - Várunk a felhasználó visszajelzésére
+    - első lépésben gombok használata
+    - majd billentyűzet használata
   - Vagy lejár az idő
   - Értékeljük a visszajelzést
     - Jó/nem jó
