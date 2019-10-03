@@ -69,4 +69,5 @@ Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor 
 - fogadjunk el a billentyűzetről is visszajelzést
 - adjunk segítséget a képernyőn (milyen billentyűk)
 - a visszejelzés méretén és színén javítás
+- a billentyűk csak akkor éljenek, ha a játék már elindult
 - 

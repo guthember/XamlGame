@@ -140,7 +140,12 @@ namespace XamlGame
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            Debug.WriteLine(e.Key);
+            //Debug.WriteLine(e.Key);
+            if (huzasokSzama < 2)
+            {
+                // még nincs két kártya a gombok nem élnek
+                return;
+            }
 
             if (e.Key == Key.Left)
             {
