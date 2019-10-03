@@ -31,6 +31,15 @@ namespace XamlGame
 
         private void ShowNewCard_Click(object sender, RoutedEventArgs e)
         {
+            UjKartyaHuzasa();
+
+        }
+
+        /// <summary>
+        /// Egy kocka dobása és új kártya húzása a dobás alapján
+        /// </summary>
+        private void UjKartyaHuzasa()
+        {
             //System.Diagnostics.Debug.WriteLine("ShowNewCard has clicked.");
 
             // kell egy hatlapos kártyacsomag
@@ -68,8 +77,8 @@ namespace XamlGame
             }
 
             elozoKartya = CardRight.Icon;
+            
             CardRight.Icon = kartyak[dobas];
-
         }
 
         private void btnAlmost_Click(object sender, RoutedEventArgs e)
@@ -81,24 +90,39 @@ namespace XamlGame
         {
             if (elozoKartya == CardRight.Icon)
             {
-                System.Diagnostics.Debug.WriteLine("Helyes");
+                
+                HelyesValasz();
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("Helytelen");
+                HelytelenValasz();
             }
+            UjKartyaHuzasa();
+        }
+
+        private void HelytelenValasz()
+        {
+            System.Diagnostics.Debug.WriteLine("Helytelen");
+            CardLeft.Icon = FontAwesomeIcon.Times;
+        }
+
+        private void HelyesValasz()
+        {
+            System.Diagnostics.Debug.WriteLine("Helyes");
+            CardLeft.Icon = FontAwesomeIcon.Check;
         }
 
         private void btnNo_Click(object sender, RoutedEventArgs e)
         {
             if (elozoKartya == CardRight.Icon)
             {
-                System.Diagnostics.Debug.WriteLine("Helytelen");
+                HelytelenValasz();
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("Helyes");
+                HelyesValasz();
             }
+            UjKartyaHuzasa();
         }
     }
 }
