@@ -30,16 +30,31 @@ namespace XamlGame
             //System.Diagnostics.Debug.WriteLine("ShowNewCard has clicked.");
 
             // kell egy hatlapos kártyacsomag
-            var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
-            var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
-            var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
-            var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
-            var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
-            var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+            //var card1 = FontAwesome.WPF.FontAwesomeIcon.Car;
+            //var card2 = FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline;
+            //var card3 = FontAwesome.WPF.FontAwesomeIcon.Briefcase;
+            //var card4 = FontAwesome.WPF.FontAwesomeIcon.Book;
+            //var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
+            //var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
+
+            var kartyak = new FontAwesome.WPF.FontAwesomeIcon[6] {
+                    FontAwesome.WPF.FontAwesomeIcon.Car,
+                    FontAwesome.WPF.FontAwesomeIcon.SnowflakeOutline,
+                    FontAwesome.WPF.FontAwesomeIcon.Briefcase,
+                    FontAwesome.WPF.FontAwesomeIcon.Book,
+                    FontAwesome.WPF.FontAwesomeIcon.Male,
+                    FontAwesome.WPF.FontAwesomeIcon.Female
+            };
 
             // dobunk dobókockával
+            var dobokocka = new Random();
+            var dobas = dobokocka.Next(6);
+
+            //System.Diagnostics.Debug.WriteLine(dobas);
+
             // amelyik kártyát kijelöli a kocka, megjelenítjük a jobboldali kártyahelyen
-            CardRight.Icon = card5;
+
+            CardRight.Icon = kartyak[dobas];
 
         }
     }
