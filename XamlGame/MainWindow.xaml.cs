@@ -20,6 +20,8 @@ namespace XamlGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int huzasokSzama = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -53,7 +55,13 @@ namespace XamlGame
             //System.Diagnostics.Debug.WriteLine(dobas);
 
             // amelyik kártyát kijelöli a kocka, megjelenítjük a jobboldali kártyahelyen
-
+            huzasokSzama++;
+            if (huzasokSzama == 2)
+            {
+                btnAlmost.IsEnabled = true;
+                btnNo.IsEnabled = true;
+                btnYes.IsEnabled = true;
+            }
             CardRight.Icon = kartyak[dobas];
 
         }

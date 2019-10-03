@@ -72,28 +72,31 @@
       </Grid.ColumnDefinitions>
       
       <!-- Lábléc, választó gombok -->
-      <Button Grid.Row="0"
+      <Button x:Name="btnNo" Grid.Row="0"
                 Grid.Column="0"
                 Content="Nem"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
+                IsEnabled="False"
                 />
 
-      <Button Grid.Row="0"
+      <Button x:Name="btnYes" Grid.Row="0"
                 Grid.Column="1"
                 Content="Igen"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
+                IsEnabled="False"
                 />
 
-      <Button Grid.Row="0"
+      <Button x:Name="btnAlmost" Grid.Row="0"
                 Grid.Column="2"
                 Content="Részben"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
+                IsEnabled="False"
                 />
     
      <Button 
