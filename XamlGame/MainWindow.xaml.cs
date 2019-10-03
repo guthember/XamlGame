@@ -109,12 +109,14 @@ namespace XamlGame
         private void HelytelenValasz()
         {
             System.Diagnostics.Debug.WriteLine("Helytelen");
+            CardLeft.Foreground = Brushes.Red;
             CardLeft.Icon = FontAwesomeIcon.Times;
         }
 
         private void HelyesValasz()
         {
             System.Diagnostics.Debug.WriteLine("Helyes");
+            CardLeft.Foreground = Brushes.Green;
             CardLeft.Icon = FontAwesomeIcon.Check;
         }
 

@@ -11,52 +11,64 @@
         MinWidth="525"
         WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown"
         >
-  <Grid>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="*"/>
-      <ColumnDefinition Width="*"/>
-    </Grid.ColumnDefinitions>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto"/>
-      <RowDefinition/>
-      <RowDefinition Height="Auto"/>
-    </Grid.RowDefinitions>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-    <!-- Fejléc -->
-    <StackPanel Grid.Row="0"
+        <!-- Fejléc -->
+        <StackPanel Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     >
-      <Label Content="Visszaszámolás: 00:55"
+            <Label Content="Visszaszámolás: 00:55"
                    Padding="10"
                    Margin="10"
                    HorizontalAlignment="Left" 
              />
-      <Label Content="Pontszám: 6500"
+            <Label Content="Pontszám: 6500"
                    Padding="10"
                    Margin="10"
                    HorizontalAlignment="Left" 
              />
-      <Label Content="oooo x1"
+            <Label Content="oooo x1"
                    Padding="10"
                    Margin="10"
                    HorizontalAlignment="Left" 
              />
-    </StackPanel>
+        </StackPanel>
 
-    <!-- Kártyák -->
-    <fa:ImageAwesome x:Name="CardLeft"
-            Grid.Column="0"
-            Grid.Row="1"
-            Icon="None" 
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Margin="20"
-         />
+        <!-- Kártyák -->
 
-    <fa:ImageAwesome x:Name="CardRight"
+        <Grid Grid.Column="0"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <fa:ImageAwesome x:Name="CardLeft"
+                Icon="None" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Grid.Column="1" Grid.Row="1"
+            />
+        </Grid>
+
+        <fa:ImageAwesome x:Name="CardRight"
       Grid.Column="1"
             Grid.Row="1"
             Icon="None" 
@@ -66,35 +78,52 @@
          />
 
 
-    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-      
-        <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-      </Grid.ColumnDefinitions>
-      
-      <!-- Lábléc, választó gombok -->
-      <Button x:Name="btnNo" Grid.Row="0"
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Lábléc, választó gombok -->
+            <Button x:Name="btnNo" Grid.Row="0"
                 Grid.Column="0"
-                Content="Nem"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
                 IsEnabled="False" Click="btnNo_Click"
-                />
+                >
+                <Button.Content >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:FontAwesome  Icon="ArrowLeft"
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"/>
+                        <Label Content="Nem" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button.Content>
 
-      <Button x:Name="btnYes" Grid.Row="0"
+            </Button>
+
+            <Button x:Name="btnYes" Grid.Row="0"
                 Grid.Column="2"
-                Content="Igen"
                 Padding="10"
                 Margin="10"
                 HorizontalAlignment="Center"
                 IsEnabled="False" Click="btnYes_Click"
-                />
+                >
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Igen" VerticalAlignment="Center" />
+                        <fa:FontAwesome  Icon="ArrowRight"
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
-      <Button x:Name="btnAlmost" Grid.Row="0"
+            <Button x:Name="btnAlmost" Grid.Row="0"
                 Grid.Column="1"
                 Content="Részben"
                 Padding="10"
@@ -102,8 +131,8 @@
                 HorizontalAlignment="Center"
                 IsEnabled="False" Click="btnAlmost_Click"
                 />
-    
-     <Button 
+
+            <Button 
        x:Name="ShowNewCard"
        Grid.Row="0"
        Grid.Column="3"
@@ -112,7 +141,7 @@
                 Margin="10"
                 HorizontalAlignment="Center" Click="ShowNewCard_Click"
                 />
-    </Grid>
+        </Grid>
 
-  </Grid>
+    </Grid>
 </Window>
