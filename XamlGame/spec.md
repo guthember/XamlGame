@@ -63,3 +63,10 @@ Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor 
 
 - Ezt ismételjük, amíg le nem jár az idő
   - a hátralévő időt folymatosan kijelezzük (mennyi a játékidő?)
+
+### Hibajavítások, apróbb módosítások
+- legyen az ablaknak egy minimális mérete
+- fogadjunk el a billentyűzetről is visszajelzést
+- adjunk segítséget a képernyőn (milyen billentyűk)
+- a visszejelzés méretén és színén javítás
+- 
