@@ -70,4 +70,8 @@ Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor 
 - adjunk segítséget a képernyőn (milyen billentyűk)
 - a visszejelzés méretén és színén javítás
 - a billentyűk csak akkor éljenek, ha a játék már elindult
-- 
+
+- a kód tisztítása
+- játékérzet javítása
+- visszaszámlálás
+- pontszámítás

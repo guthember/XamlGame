@@ -23,11 +23,21 @@ namespace XamlGame
     public partial class MainWindow : Window
     {
         private int huzasokSzama = 0;
+        Random dobokocka = new Random();
+        FontAwesomeIcon[] kartyak = new FontAwesomeIcon[6];
+        
         FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            kartyak[0] = FontAwesomeIcon.Car;
+            kartyak[1] = FontAwesomeIcon.SnowflakeOutline;
+            kartyak[2] = FontAwesomeIcon.Briefcase;
+            kartyak[3] = FontAwesomeIcon.Book;
+            kartyak[4] = FontAwesomeIcon.Male;
+            kartyak[5] = FontAwesomeIcon.Female;
         }
 
         private void ShowNewCard_Click(object sender, RoutedEventArgs e)
@@ -51,17 +61,10 @@ namespace XamlGame
             //var card5 = FontAwesome.WPF.FontAwesomeIcon.Male;
             //var card6 = FontAwesome.WPF.FontAwesomeIcon.Female;
 
-            var kartyak = new FontAwesomeIcon[6] {
-                    FontAwesomeIcon.Car,
-                    FontAwesomeIcon.SnowflakeOutline,
-                    FontAwesomeIcon.Briefcase,
-                    FontAwesomeIcon.Book,
-                    FontAwesomeIcon.Male,
-                    FontAwesomeIcon.Female
-            };
+            
 
             // dobunk dobókockával
-            var dobokocka = new Random();
+            
             var dobas = dobokocka.Next(6);
 
             //System.Diagnostics.Debug.WriteLine(dobas);
