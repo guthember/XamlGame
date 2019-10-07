@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FontAwesome.WPF;
 using System.Diagnostics;
+using System.Windows.Media.Animation;
 
 namespace XamlGame
 {
@@ -114,6 +115,7 @@ namespace XamlGame
             System.Diagnostics.Debug.WriteLine("Helytelen");
             CardLeft.Foreground = Brushes.Red;
             CardLeft.Icon = FontAwesomeIcon.Times;
+            AnswerSlowAnimation();
         }
 
         private void HelyesValasz()
@@ -121,6 +123,16 @@ namespace XamlGame
             System.Diagnostics.Debug.WriteLine("Helyes");
             CardLeft.Foreground = Brushes.Green;
             CardLeft.Icon = FontAwesomeIcon.Check;
+            AnswerSlowAnimation();
+        }
+
+        /// <summary>
+        /// Animáció segítségével az Opacity tulajdonságot a CardLeft-nek 1-ről 0-ra állítjuk
+        /// </summary>
+        private void AnswerSlowAnimation()
+        {
+            var animation = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(1000));
+            CardLeft.BeginAnimation(OpacityProperty, animation);
         }
 
         private void btnNo_Click(object sender, RoutedEventArgs e)
