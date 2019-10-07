@@ -63,7 +63,7 @@ namespace XamlGame
         private void IngaoraUt(object sender, EventArgs e)
         {
             visszalevoIdo = visszalevoIdo.Add(TimeSpan.FromSeconds(-1));
-            lblCountDown.Content = $"Visszaszámlálás: {visszalevoIdo}";
+            lblCountDown.Content = $"Visszaszámlálás: {visszalevoIdo.ToString(@"mm\:ss")}";
 
             if (visszalevoIdo == TimeSpan.Zero)
             {
