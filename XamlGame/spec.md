@@ -75,3 +75,8 @@ Fontos, hogy egymás után következhessen két egyforma kártya. Ez csak akkor 
 - játékérzet javítása
 - visszaszámlálás
 - pontszámítás
+
+### Desktop felület programozása
+- többszálú programozás világa
+- Robot példa 
+- 

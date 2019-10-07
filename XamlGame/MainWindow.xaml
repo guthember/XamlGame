@@ -29,7 +29,8 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     >
-            <Label Content="Visszaszámolás: 00:55"
+            <Label x:Name="lblCountDown"
+                   Content="Visszaszámolás: 00:00:55"
                    Padding="10"
                    Margin="10"
                    HorizontalAlignment="Left" 

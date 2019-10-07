@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using FontAwesome.WPF;
 using System.Diagnostics;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace XamlGame
 {
@@ -26,8 +27,11 @@ namespace XamlGame
         private int huzasokSzama = 0;
         Random dobokocka = new Random();
         FontAwesomeIcon[] kartyak = new FontAwesomeIcon[6];
-        
+ 
         FontAwesomeIcon elozoKartya = FontAwesomeIcon.None;
+
+        TimeSpan visszalevoIdo;
+        DispatcherTimer ingaora;
 
         public MainWindow()
         {
@@ -39,6 +43,38 @@ namespace XamlGame
             kartyak[3] = FontAwesomeIcon.Book;
             kartyak[4] = FontAwesomeIcon.Male;
             kartyak[5] = FontAwesomeIcon.Female;
+
+            // Felparaméterezzük az ingaórákat:
+            // másodpercenként adjon egy eseményt
+            ingaora = new DispatcherTimer(
+                    TimeSpan.FromSeconds(1)         // egy másodpercenként kérem az eseményt
+                    ,DispatcherPriority.Normal      // semmi különlegest nem kérek, néhány századmásodperc nem számít
+                    ,IngaoraUt                    // ezt hívjuk minden alkalommal
+                    ,Application.Current.Dispatcher // ennek a segítségével tudunk a felületre adatot küldeni
+                ); ;
+            // mivel azonnal elindul meg kell állítani
+            ingaora.Stop();
+        }
+
+        /// <summary>
+        /// Ezt hívja az ingaóra minden alkalommal amikor üt
+        /// </summary>
+        /// <returns></returns>
+        private void IngaoraUt(object sender, EventArgs e)
+        {
+            visszalevoIdo = visszalevoIdo.Add(TimeSpan.FromSeconds(-1));
+            lblCountDown.Content = $"Visszaszámlálás: {visszalevoIdo}";
+
+            if (visszalevoIdo == TimeSpan.Zero)
+            {
+                JatekVege();
+            }
+
+        }
+
+        private void JatekVege()
+        {
+            throw new NotImplementedException();
         }
 
         private void ShowNewCard_Click(object sender, RoutedEventArgs e)
@@ -79,6 +115,8 @@ namespace XamlGame
                 btnNo.IsEnabled = true;
                 btnYes.IsEnabled = true;
                 ShowNewCard.IsEnabled = false;
+
+                JatekKezdete();
             }
 
             elozoKartya = CardRight.Icon;
@@ -93,6 +131,12 @@ namespace XamlGame
             // megjeleníteni az új kártyát
             var animationIn = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(100));
             CardRight.BeginAnimation(OpacityProperty, animationIn);
+        }
+
+        private void JatekKezdete()
+        {
+            visszalevoIdo = TimeSpan.FromSeconds(55);
+            ingaora.Start();
         }
 
         private void btnAlmost_Click(object sender, RoutedEventArgs e)
