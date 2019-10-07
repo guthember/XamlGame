@@ -82,8 +82,17 @@ namespace XamlGame
             }
 
             elozoKartya = CardRight.Icon;
+
+            // eltüntetni az előző kártyát
+
+            var animationOut = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(100));
+            CardRight.BeginAnimation(OpacityProperty, animationOut);
             
             CardRight.Icon = kartyak[dobas];
+
+            // megjeleníteni az új kártyát
+            var animationIn = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(100));
+            CardRight.BeginAnimation(OpacityProperty, animationIn);
         }
 
         private void btnAlmost_Click(object sender, RoutedEventArgs e)
